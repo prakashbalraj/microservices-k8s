@@ -1,16 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name:pod_ex
+  name: podex
   labels: 
     app: hello_pod
 spec:
   containers:
-  - name: nginx
+  - name: webserver
     image: nginx
     ports:
-    - name: ng_port
-      port: 80
-  - name: watcher
+      containerPort: 80
+  - name: webwatcher
     image: afakharany/watcher
-  
